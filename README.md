@@ -52,7 +52,7 @@ src/
    
    Create a `.env` file in the root directory with the following variables:
    ```
-   PORT=3000
+   PORT=8000
    MONGODB_URI=mongodb://localhost:27017/your_database_name
    JWT_SECRET=your_jwt_secret_key_here
    ```
@@ -102,5 +102,5 @@ npx nodemon src/server.js
 1. Install dependencies: `npm install`
 2. Configure `.env` file with MongoDB URI and JWT secret
 3. Run the server: 
-4. Server will start on the configured PORT (default: 3000)
+4. Server will start on the configured PORT (default: 8000)
 
