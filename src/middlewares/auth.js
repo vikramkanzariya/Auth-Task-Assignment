@@ -2,8 +2,9 @@ const jwt = require("jsonwebtoken");
 
 exports.auth = async (req, res, next) => {
   try {
-    const token = req.header.authorization.split(" ")[1];
+    const token = req.headers.authorization.split(" ")[1];
 
+    // console.log("Token:", token);
     if (!token) {
       return res.status(401).json({ message: "Token not Found" });
     }
@@ -13,6 +14,6 @@ exports.auth = async (req, res, next) => {
     next();
   } catch (error) {
     console.error("Error:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ message: "Invalid Token" });
   }
 }
